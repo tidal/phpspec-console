@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8c6900212a7f8474e1e1436144fc3d54",
+    "content-hash": "a0f48fcaa40f143a36d93b0189a0ed0e",
     "packages": [
         {
             "name": "doctrine/instantiator",
@@ -1115,11 +1115,552 @@
             "time": "2016-11-23T20:04:58+00:00"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "gnugat/redaktilo",
+            "version": "v1.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gnugat/redaktilo.git",
+                "reference": "6ec2da8bc31c0a723ac14670cf193324b773b05e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gnugat/redaktilo/zipball/6ec2da8bc31c0a723ac14670cf193324b773b05e",
+                "reference": "6ec2da8bc31c0a723ac14670cf193324b773b05e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3|^7.0",
+                "symfony/filesystem": "^2.4.3|^3.0"
+            },
+            "require-dev": {
+                "bossa/phpspec2-expect": "^1.0",
+                "phpspec/phpspec": "^2.4",
+                "phpunit/phpunit": "^4.5|^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Gnugat\\Redaktilo\\": "src/Gnugat/Redaktilo"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Loïck Piera",
+                    "email": "pyrech@gmail.com",
+                    "homepage": "http://loickpiera.com/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Loïc Faugeron",
+                    "email": "faugeron.loic@gmail.com",
+                    "homepage": "http://gnugat.github.io",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Find, insert, replace and remove lines with an Editor-like object",
+            "keywords": [
+                "edit",
+                "editor",
+                "file",
+                "find",
+                "insert",
+                "lines",
+                "remove",
+                "replace"
+            ],
+            "time": "2015-12-01T17:44:21+00:00"
+        },
+        {
+            "name": "memio/linter",
+            "version": "v2.0.0-alpha2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/memio/linter.git",
+                "reference": "6b579f2e1389752f79cd76e56b4f7eb7d26422ac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/memio/linter/zipball/6b579f2e1389752f79cd76e56b4f7eb7d26422ac",
+                "reference": "6b579f2e1389752f79cd76e56b4f7eb7d26422ac",
+                "shasum": ""
+            },
+            "require": {
+                "memio/model": "^2.0@alpha",
+                "memio/validator": "^2.0@alpha",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.6",
+                "phpspec/phpspec": "^3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Memio\\Linter\\": "src/Memio/Linter"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Loïc Faugeron",
+                    "email": "faugeron.loic@gmail.com",
+                    "homepage": "http://gnugat.github.io",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Memio's linter, a set of constraint that check models for syntax errors",
+            "homepage": "http://memio.github.io/memio",
+            "keywords": [
+                "code",
+                "generator",
+                "php"
+            ],
+            "time": "2016-09-27T17:46:04+00:00"
+        },
+        {
+            "name": "memio/memio",
+            "version": "v2.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/memio/memio.git",
+                "reference": "47708e9f39e1cd70d832ab60fe1006290246d09b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/memio/memio/zipball/47708e9f39e1cd70d832ab60fe1006290246d09b",
+                "reference": "47708e9f39e1cd70d832ab60fe1006290246d09b",
+                "shasum": ""
+            },
+            "require": {
+                "memio/linter": "^2.0@alpha",
+                "memio/model": "^2.0@alpha",
+                "memio/pretty-printer": "^2.0@alpha",
+                "memio/twig-template-engine": "^2.0@alpha",
+                "memio/validator": "^2.0@alpha",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.6",
+                "phpunit/phpunit": "^5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Memio\\Memio\\": "src/Memio/Memio",
+                    "Memio\\Memio\\Config\\": "config"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Loïc Faugeron",
+                    "email": "faugeron.loic@gmail.com",
+                    "homepage": "http://gnugat.github.io",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A highly opinionated PHP code generator library",
+            "homepage": "http://memio.github.io/memio",
+            "keywords": [
+                "code",
+                "generator",
+                "php"
+            ],
+            "time": "2016-10-03T18:20:18+00:00"
+        },
+        {
+            "name": "memio/model",
+            "version": "v2.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/memio/model.git",
+                "reference": "4d0ec41da5630d191f6aada6a2c34862e831981a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/memio/model/zipball/4d0ec41da5630d191f6aada6a2c34862e831981a",
+                "reference": "4d0ec41da5630d191f6aada6a2c34862e831981a",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.6",
+                "phpspec/phpspec": "^3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Memio\\Model\\": "src/Memio/Model"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Loïc Faugeron",
+                    "email": "faugeron.loic@gmail.com",
+                    "homepage": "http://gnugat.github.io",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Memio's models, used to describe the code to generate",
+            "homepage": "http://memio.github.io/memio",
+            "keywords": [
+                "code",
+                "generator",
+                "php"
+            ],
+            "time": "2016-10-03T18:08:22+00:00"
+        },
+        {
+            "name": "memio/pretty-printer",
+            "version": "v2.0.0-alpha2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/memio/pretty-printer.git",
+                "reference": "bfbe6603b4f52c96430cd1593027860392056596"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/memio/pretty-printer/zipball/bfbe6603b4f52c96430cd1593027860392056596",
+                "reference": "bfbe6603b4f52c96430cd1593027860392056596",
+                "shasum": ""
+            },
+            "require": {
+                "memio/model": "^2.0@alpha",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.6",
+                "phpspec/phpspec": "^3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Memio\\PrettyPrinter\\": "src/Memio/PrettyPrinter"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Loïc Faugeron",
+                    "email": "faugeron.loic@gmail.com",
+                    "homepage": "http://gnugat.github.io",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Memio's PrettyPrinter, used to generate PHP code from given Model",
+            "homepage": "http://memio.github.io/memio",
+            "keywords": [
+                "code",
+                "generator",
+                "php"
+            ],
+            "time": "2016-09-27T17:43:52+00:00"
+        },
+        {
+            "name": "memio/spec-gen",
+            "version": "v0.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/memio/spec-gen.git",
+                "reference": "be2e1e778cdc3da4533d77fd09f2e92582f6a11a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/memio/spec-gen/zipball/be2e1e778cdc3da4533d77fd09f2e92582f6a11a",
+                "reference": "be2e1e778cdc3da4533d77fd09f2e92582f6a11a",
+                "shasum": ""
+            },
+            "require": {
+                "gnugat/redaktilo": "^1.7",
+                "memio/linter": "^2.0@alpha",
+                "memio/memio": "^2.0@alpha",
+                "memio/model": "^2.0@alpha",
+                "memio/pretty-printer": "^2.0@alpha",
+                "memio/twig-template-engine": "^2.0@alpha",
+                "memio/validator": "^2.0@alpha",
+                "php": "^7.0",
+                "phpspec/phpspec": "^3.0",
+                "symfony/event-dispatcher": "^2.7 || ^3.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.6",
+                "phpunit/phpunit": "^5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Memio\\SpecGen\\": "src/Memio/SpecGen"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Loïc Faugeron",
+                    "email": "faugeron.loic@gmail.com",
+                    "homepage": "http://gnugat.github.io",
+                    "role": "Developer"
+                }
+            ],
+            "description": "phpspec extension for better code generation",
+            "homepage": "http://memio.github.io/spec-gen",
+            "keywords": [
+                "code",
+                "extension",
+                "generator",
+                "php",
+                "phpspec"
+            ],
+            "time": "2016-10-01T18:09:43+00:00"
+        },
+        {
+            "name": "memio/twig-template-engine",
+            "version": "v2.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/memio/twig-template-engine.git",
+                "reference": "8a8b95a5255a4442498248c93631da91e45d150d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/memio/twig-template-engine/zipball/8a8b95a5255a4442498248c93631da91e45d150d",
+                "reference": "8a8b95a5255a4442498248c93631da91e45d150d",
+                "shasum": ""
+            },
+            "require": {
+                "memio/model": "^2.0@alpha",
+                "memio/pretty-printer": "^2.0@alpha",
+                "php": "^7.0",
+                "twig/twig": "^1.18 || ^2.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.6",
+                "phpspec/phpspec": "^3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Memio\\TwigTemplateEngine\\": "src/Memio/TwigTemplateEngine",
+                    "Memio\\TwigTemplateEngine\\Config\\": "config"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Loïc Faugeron",
+                    "email": "faugeron.loic@gmail.com",
+                    "homepage": "http://gnugat.github.io",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Memio's Twig templates, used to generate PHP code from given Model",
+            "homepage": "http://memio.github.io/memio",
+            "keywords": [
+                "code",
+                "generator",
+                "php",
+                "templates",
+                "twig"
+            ],
+            "time": "2017-01-12T12:19:45+00:00"
+        },
+        {
+            "name": "memio/validator",
+            "version": "v2.0.0-alpha2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/memio/validator.git",
+                "reference": "f6b7a6612389477be38ed8c3bdf19f4c554622a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/memio/validator/zipball/f6b7a6612389477be38ed8c3bdf19f4c554622a1",
+                "reference": "f6b7a6612389477be38ed8c3bdf19f4c554622a1",
+                "shasum": ""
+            },
+            "require": {
+                "memio/model": "^2.0@alpha",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.6",
+                "phpspec/phpspec": "^3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Memio\\Validator\\": "src/Memio/Validator"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Loïc Faugeron",
+                    "email": "faugeron.loic@gmail.com",
+                    "homepage": "http://gnugat.github.io",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Memio's validator, used to check built models again a pre-defined set of rules",
+            "homepage": "http://memio.github.io/memio",
+            "keywords": [
+                "code",
+                "generator",
+                "php"
+            ],
+            "time": "2016-09-27T17:47:55+00:00"
+        },
+        {
+            "name": "symfony/filesystem",
+            "version": "v3.2.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/filesystem.git",
+                "reference": "64421e6479c4a8e60d790fb666bd520992861b66"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/64421e6479c4a8e60d790fb666bd520992861b66",
+                "reference": "64421e6479c4a8e60d790fb666bd520992861b66",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Filesystem\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Filesystem Component",
+            "homepage": "https://symfony.com",
+            "time": "2017-03-26T15:47:15+00:00"
+        },
+        {
+            "name": "twig/twig",
+            "version": "v2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/Twig.git",
+                "reference": "9718186a5df85a4f7917e78d3ffcabc204c75d25"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/9718186a5df85a4f7917e78d3ffcabc204c75d25",
+                "reference": "9718186a5df85a4f7917e78d3ffcabc204c75d25",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0",
+                "symfony/polyfill-mbstring": "~1.0"
+            },
+            "require-dev": {
+                "psr/container": "^1.0",
+                "symfony/debug": "~2.7",
+                "symfony/phpunit-bridge": "~3.3@dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Twig_": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Armin Ronacher",
+                    "email": "armin.ronacher@active-4.com",
+                    "role": "Project Founder"
+                },
+                {
+                    "name": "Twig Team",
+                    "homepage": "http://twig.sensiolabs.org/contributors",
+                    "role": "Contributors"
+                }
+            ],
+            "description": "Twig, the flexible, fast, and secure template language for PHP",
+            "homepage": "http://twig.sensiolabs.org",
+            "keywords": [
+                "templating"
+            ],
+            "time": "2017-03-22T15:41:51+00:00"
+        }
+    ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "alpha",
     "stability-flags": [],
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": []
