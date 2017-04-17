@@ -21,6 +21,7 @@ use RuntimeException;
 */
 class ConfiguratorSpec extends ObjectBehavior
 {
+
     use IsConfiguratorSpecTrait;
 
     function it_is_initializable()
@@ -51,100 +52,5 @@ class ConfiguratorSpec extends ObjectBehavior
             ->during('configure', array($command));
     }
 
-    function it_configures_name(GenericCommand $command)
-    {
-        $value = 'foo';
-
-        $this->setConfig([
-            Config::NAME_KEY => $value
-        ]);
-
-        $command->setName($value)
-            ->shouldBeCalled();
-
-        $this->configure($command);
-    }
-
-    function it_configures_description(GenericCommand $command)
-    {
-        $value = 'foo';
-
-        $this->setConfig([
-            Config::DESCRIPTION_KEY => $value
-        ]);
-
-        $command->setDescription($value)
-            ->shouldBeCalled();
-
-        $this->configure($command);
-    }
-
-    function it_configures_help(GenericCommand $command)
-    {
-        $value = 'foo';
-
-        $this->setConfig([
-            Config::HELP_KEY => $value
-        ]);
-
-        $command->setHelp($value)
-            ->shouldBeCalled();
-
-        $this->configure($command);
-    }
-
-    function it_configures_hidden(GenericCommand $command)
-    {
-        $value = true;
-
-        $this->setConfig([
-            Config::HIDDEN_KEY => $value
-        ]);
-
-        $command->setHidden($value)
-            ->shouldBeCalled();
-
-        $this->configure($command);
-    }
-
-    function it_configures_arguments(GenericCommand $command)
-    {
-        $name = 'foo';
-
-        $this->setConfig([
-            Config::ARGUMENTS_KEY => [
-                $name => [
-                    Config::NAME_KEY => $name,
-                    Config::MODE_KEY => 1,
-                    Config::DESCRIPTION_KEY => 'bar baz bus'
-                ],
-            ]
-        ]);
-
-        $command->setDefinition(Argument::type('array'))
-            ->shouldBeCalled();
-
-        $this->configure($command);
-    }
-
-    function it_configures_options(GenericCommand $command)
-    {
-        $name = 'foo';
-
-        $this->setConfig([
-            Config::OPTIONS_KEY => [
-                $name => [
-                    Config::NAME_KEY => $name,
-                    Config::MODE_KEY => 1,
-                    Config::DESCRIPTION_KEY => ''
-                ],
-            ]
-        ]);
-
-        $command->addOption($name, null, 1, '')
-            ->shouldBeCalled();
-
-        $this->configure($command);
-    }
 }
 

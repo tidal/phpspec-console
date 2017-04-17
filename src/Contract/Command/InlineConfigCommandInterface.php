@@ -14,5 +14,5 @@ namespace Tidal\PhpSpec\ConsoleExtension\Contract\Command;
  */
 interface InlineConfigCommandInterface extends ConfigurableCommandInterface
 {
-    public static function getConfig() : array;
+    public function getConfig() : array;
 }
