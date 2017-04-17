@@ -9,7 +9,7 @@
 
 namespace spec\Tidal\PhpSpec\ConsoleExtension\Behavior\Prophecy;
 
-use Tidal\PhpSpec\ConsoleExtension\Command\InlineConfigurator as Configurator;
+use Tidal\PhpSpec\ConsoleExtension\Command\Configurator;
 use Prophecy\Prophet;
 use Prophecy\Prophecy\ObjectProphecy;
 
