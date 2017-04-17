@@ -1,0 +1,16 @@
+{
+    "name": "tidal/phpspec-console",
+    "description": "PhpSpec extension for console commands",
+    "type": "library",
+    "require": {
+        "phpspec/phpspec": "^3.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Timo Michna",
+            "email": "timomichna@yahoo.de"
+        }
+    ],
+    "minimum-stability": "stable"
+}
