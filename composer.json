@@ -19,5 +19,8 @@
     },
     "require": {
         "phpspec/phpspec": "^3.2"
+    },
+    "require-dev": {
+        "memio/spec-gen": "^0.7"
     }
 }
