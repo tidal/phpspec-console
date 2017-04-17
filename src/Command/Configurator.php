@@ -12,7 +12,6 @@ namespace Tidal\PhpSpec\ConsoleExtension\Command;
 use Tidal\PhpSpec\ConsoleExtension\Behavior\Command\ConfiguratorTrait;
 use Tidal\PhpSpec\ConsoleExtension\Contract\Command\{
     CommandInterface,
-    InlineConfigCommandInterface,
     ConfiguratorInterface
 };
 use RuntimeException;
@@ -34,9 +33,9 @@ class Configurator implements ConfiguratorInterface
     }
 
     /**
-     * @param InlineConfigCommandInterface $command
+     * @param CommandInterface $command
      */
-    protected function doConfigure(InlineConfigCommandInterface $command)
+    protected function doConfigure(CommandInterface $command)
     {
        if (!isset($this->config)) {
             throw new RuntimeException(sprintf(

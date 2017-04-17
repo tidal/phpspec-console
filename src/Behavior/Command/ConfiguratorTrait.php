@@ -87,6 +87,9 @@ trait ConfiguratorTrait
      */
     private function configureArguments(CommandInterface $command)
     {
+        if (!isset($this->getConfig()[Config::ARGUMENTS_KEY])) {
+            return;
+        }
         $command->setDefinition(
             $this->createArguments(
                 $this->getConfig()[Config::ARGUMENTS_KEY]
@@ -99,6 +102,10 @@ trait ConfiguratorTrait
      */
     private function configureOptions(CommandInterface $command)
     {
+        if (!isset($this->getConfig()[Config::OPTIONS_KEY])) {
+            return;
+        }
+
         foreach ($this->getConfig()[Config::OPTIONS_KEY] as $name => $option) {
             $command->addOption(
                 $name,
