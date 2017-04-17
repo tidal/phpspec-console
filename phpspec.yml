@@ -1,0 +1,6 @@
+suites:
+    behavior_suite:
+        namespace: Tidal\PhpSpec\ConsoleExtension\
+        psr4_prefix: Tidal\PhpSpec\ConsoleExtension\
+extensions:
+    Memio\SpecGen\MemioSpecGenExtension: ~
