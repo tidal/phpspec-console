@@ -1,10 +1,9 @@
 {
     "name": "tidal/phpspec-console",
     "description": "PhpSpec extension for console commands",
+    "keywords": ["phpspec", "extension", "console", "command", "config", "configuration", "php7"],
     "type": "library",
-    "require": {
-        "phpspec/phpspec": "^3.2"
-    },
+    "minimum-stability": "stable",
     "license": "MIT",
     "authors": [
         {
@@ -12,5 +11,13 @@
             "email": "timomichna@yahoo.de"
         }
     ],
-    "minimum-stability": "stable"
+    "autoload": {
+        "psr-4": {
+            "Tidal\\PhpSpec\\ConsoleExtension\\": "src",
+            "spec\\Tidal\\PhpSpec\\ConsoleExtension\\": "spec"
+        }
+    },
+    "require": {
+        "phpspec/phpspec": "^3.2"
+    }
 }
