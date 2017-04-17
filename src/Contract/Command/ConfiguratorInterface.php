@@ -16,7 +16,7 @@ interface ConfiguratorInterface
 {
     /**
      * @param CommandInterface $command
-     * @return mixed
+     * @return void
      */
     public function configure(CommandInterface $command) : void;
 
