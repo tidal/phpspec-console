@@ -1,7 +1,7 @@
 language: php
 php:
-  - 7
   - 7.1
+  - 7.2
   - hhvm
 
 sudo: required
@@ -9,6 +9,7 @@ sudo: required
 matrix:
     allow_failures:
         - php: hhvm
+        - php: 7.2
 
 before_script:
   - composer selfupdate

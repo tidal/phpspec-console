@@ -19,6 +19,7 @@
         }
     },
     "require": {
+        "php": ">=7.1.0",
         "phpspec/phpspec": "^3.2"
     },
     "require-dev": {
