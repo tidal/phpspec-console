@@ -28,9 +28,10 @@ class GenericCommand extends Command implements CommandInterface
         HasWriterTrait;
 
     /**
-     * AbstractInlineConfigCommand constructor.
+     * GenericCommand constructor.
      * @param WriterInterface $writer
-     * @param ConfiguratorInterface|null $configurator
+     * @param ConfiguratorInterface $configurator
+     * @param array|null $config
      */
     public function __construct(WriterInterface $writer, ConfiguratorInterface $configurator, ?array $config = [])
     {
