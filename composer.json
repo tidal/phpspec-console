@@ -3,7 +3,8 @@
     "description": "PhpSpec extension for console commands",
     "keywords": ["phpspec", "extension", "console", "command", "config", "configuration", "php7"],
     "type": "library",
-    "minimum-stability": "stable",
+    "minimum-stability": "alpha",
+    "prefer-stable": true,
     "license": "MIT",
     "authors": [
         {
