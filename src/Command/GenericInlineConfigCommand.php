@@ -16,7 +16,10 @@ use Tidal\PhpSpec\ConsoleExtension\Contract\Command\{
 };
 use Tidal\PhpSpec\ConsoleExtension\Contract\WriterInterface;
 use Tidal\PhpSpec\ConsoleExtension\Behavior\Command\ConfigurableTrait;
-use Tidal\PhpSpec\ConsoleExtension\Behavior\HasWriterTrait;
+use Tidal\PhpSpec\ConsoleExtension\Behavior\{
+    HasWriterTrait,
+    HasContainerTrait
+};
 use Tidal\PhpSpec\ConsoleExtension\Contract\Command\ConfigInterface as Config;
 use Tidal\PhpSpec\ConsoleExtension\Contract\Command\InlineConfigCommandInterface;
 
@@ -26,7 +29,8 @@ use Tidal\PhpSpec\ConsoleExtension\Contract\Command\InlineConfigCommandInterface
 class GenericInlineConfigCommand extends Command implements InlineConfigCommandInterface
 {
     use ConfigurableTrait,
-        HasWriterTrait;
+        HasWriterTrait,
+        HasContainerTrait;
 
     /**
      * CONFIG
