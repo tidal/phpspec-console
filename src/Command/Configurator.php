@@ -39,7 +39,8 @@ class Configurator implements ConfiguratorInterface
     {
        if (!isset($this->config)) {
             throw new RuntimeException(sprintf(
-                'Config has not been set in &s',
+                "Cannot run command '%s'. Config has not been set in &s",
+                $command->getName(),
                 __METHOD__
             ));
        }
