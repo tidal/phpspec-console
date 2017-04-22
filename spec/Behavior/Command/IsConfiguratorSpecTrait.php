@@ -13,7 +13,21 @@ use spec\Tidal\PhpSpec\ConsoleExtension\Behavior\Prophecy\HasCommandMockTrait;
 use Tidal\PhpSpec\ConsoleExtension\Contract\Command\ConfiguratorInterface;
 use Tidal\PhpSpec\ConsoleExtension\Contract\Command\ConfigInterface as Config;
 use Prophecy\Argument;
+use Prophecy\Prophecy\MethodProphecy;
 
+/**
+ * Trait spec\Tidal\PhpSpec\ConsoleExtension\Behavior\Prophecy\HasContainerMockTrait
+ *
+ * @method MethodProphecy|object setConfig($config)
+ * @method MethodProphecy|object getConfig()
+ * @method MethodProphecy|object setName($name)
+ * @method MethodProphecy|object getName()
+ * @method MethodProphecy|object setHelp($help)
+ * @method MethodProphecy|object getHelp()
+ * @method MethodProphecy|object setDescription($description)
+ * @method MethodProphecy|object addOption($name, $shortcut, $mode, $description)
+ * @method MethodProphecy|object configure($command)
+ */
 trait IsConfiguratorSpecTrait
 {
     use HasCommandMockTrait;
@@ -120,18 +134,22 @@ trait IsConfiguratorSpecTrait
     {
         $command = $this->createCommandProphecy();
         $name = 'foo';
+        $shortcut = 'f';
+        $mode = 1;
+        $description = 'foo bar baz';
 
         $this->setConfig([
             Config::OPTIONS_KEY => [
                 $name => [
                     Config::NAME_KEY => $name,
-                    Config::MODE_KEY => 1,
-                    Config::DESCRIPTION_KEY => ''
+                    Config::MODE_KEY => $mode,
+                    Config::DESCRIPTION_KEY => $description,
+                    Config::SHORTCUT_KEY => $shortcut
                 ],
             ]
         ]);
 
-        $command->addOption($name, null, 1, '')
+        $command->addOption($name, $shortcut, $mode, $description)
             ->shouldBeCalled();
 
         $this->configure($command);

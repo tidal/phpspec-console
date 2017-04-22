@@ -109,9 +109,9 @@ trait ConfiguratorTrait
         foreach ($this->getConfig()[Config::OPTIONS_KEY] as $name => $option) {
             $command->addOption(
                 $name,
-                null,
-                $option[Config::MODE_KEY],
-                $option[Config::DESCRIPTION_KEY]
+                isset($option[Config::SHORTCUT_KEY]) ? $option[Config::SHORTCUT_KEY] : null,
+                isset($option[Config::MODE_KEY]) ? $option[Config::MODE_KEY] : null,
+                isset($option[Config::DESCRIPTION_KEY]) ? $option[Config::DESCRIPTION_KEY] : ''
             );
         }
     }
