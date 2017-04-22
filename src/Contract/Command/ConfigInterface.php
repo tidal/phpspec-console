@@ -15,6 +15,7 @@ namespace Tidal\PhpSpec\ConsoleExtension\Contract\Command;
 interface ConfigInterface
 {
     public const NAME_KEY = 'name';
+    public const SHORTCUT_KEY = 'shortcut';
     public const DESCRIPTION_KEY = 'description';
     public const HELP_KEY = 'help';
     public const HIDDEN_KEY = 'hidden';
