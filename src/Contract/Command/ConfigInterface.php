@@ -27,7 +27,8 @@ interface ConfigInterface
         self::NAME_KEY,
         self::DESCRIPTION_KEY,
         self::HELP_KEY,
-        self::HIDDEN_KEY
+        self::HIDDEN_KEY,
+        self::SHORTCUT_KEY
     ];
 }
 
