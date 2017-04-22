@@ -12,7 +12,10 @@ use Tidal\PhpSpec\ConsoleExtension\Writer;
 use Tidal\PhpSpec\ConsoleExtension\Contract\Command\ConfiguratorInterface;
 use Tidal\PhpSpec\ConsoleExtension\Command\GenericInlineConfigCommand;
 use Tidal\PhpSpec\ConsoleExtension\Contract\Command\ConfigInterface as Config;
-use spec\Tidal\PhpSpec\ConsoleExtension\Behavior\HasWriterSpecTrait;
+use spec\Tidal\PhpSpec\ConsoleExtension\Behavior\{
+    HasWriterSpecTrait,
+    HasContainerSpecTrait
+};
 use spec\Tidal\PhpSpec\ConsoleExtension\Behavior\Command\IsConfigurableSpecTrait;
 use PhpSpec\ObjectBehavior;
 
@@ -22,7 +25,8 @@ use PhpSpec\ObjectBehavior;
 class GenericInlineConfigCommandSpec extends ObjectBehavior
 {
     use IsConfigurableSpecTrait,
-        HasWriterSpecTrait;
+        HasWriterSpecTrait,
+        HasContainerSpecTrait;
 
     ////////////////////////////////////////////
     ///                SETUP                 ///
