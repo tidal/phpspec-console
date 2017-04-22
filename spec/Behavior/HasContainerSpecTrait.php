@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-namespace spec\Tidal\PhpSpec\ConsoleExtension\Behavior\Command;
+namespace spec\Tidal\PhpSpec\ConsoleExtension\Behavior;
 
 use spec\Tidal\PhpSpec\ConsoleExtension\Behavior\Prophecy\HasContainerMockTrait;
 use PhpSpec\ServiceContainer;
@@ -32,3 +32,4 @@ trait HasContainerSpecTrait
     }
 
 }
+
