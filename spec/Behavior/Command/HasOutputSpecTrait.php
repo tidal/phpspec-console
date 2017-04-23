@@ -22,7 +22,7 @@ trait HasOutputSpecTrait
 {
     use HasOutputMockTrait;
 
-    function its_input_is_accessible()
+    function its_output_is_accessible()
     {
         $input = $this->createOutputMock();
 
