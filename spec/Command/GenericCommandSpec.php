@@ -16,7 +16,11 @@ use spec\Tidal\PhpSpec\ConsoleExtension\Behavior\{
     HasWriterSpecTrait,
     HasContainerSpecTrait
 };
-use spec\Tidal\PhpSpec\ConsoleExtension\Behavior\Command\IsConfigurableSpecTrait;
+use spec\Tidal\PhpSpec\ConsoleExtension\Behavior\Command\{
+    IsConfigurableSpecTrait,
+    HasInputSpecTrait,
+    HasOutputSpecTrait
+};
 use PhpSpec\ObjectBehavior;
 
 /**
@@ -26,7 +30,9 @@ class GenericCommandSpec extends ObjectBehavior
 {
     use IsConfigurableSpecTrait,
         HasWriterSpecTrait,
-        HasContainerSpecTrait;
+        HasContainerSpecTrait,
+        HasInputSpecTrait,
+        HasOutputSpecTrait;
 
     ////////////////////////////////////////////
     ///                SETUP                 ///
