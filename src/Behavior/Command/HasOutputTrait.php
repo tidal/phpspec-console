@@ -18,14 +18,14 @@ trait HasOutputTrait
     /**
      * @var OutputInterface
      */
-    protected $input;
+    protected $output;
 
     /**
-     * @param OutputInterface $input
+     * @param OutputInterface $output
      */
-    public function setOutput(OutputInterface $input)
+    public function setOutput(OutputInterface $output)
     {
-        $this->input = $input;
+        $this->output = $output;
     }
 
     /**
@@ -33,7 +33,7 @@ trait HasOutputTrait
      */
     public function getOutput(): OutputInterface
     {
-        return $this->input;
+        return $this->output;
     }
 }
 
