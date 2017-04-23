@@ -1,3 +1,7 @@
+  ### [0.2.1] - 2014-04-23
+
+  * fixed output handling
+  
   ### [0.2.0] - 2014-04-23
 
   * added test for input and output
