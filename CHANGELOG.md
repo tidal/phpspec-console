@@ -1,3 +1,7 @@
+  ### [0.2.0] - 2014-04-23
+
+  * added test for input and output
+  
   ### [0.1.1] - 2014-04-23
 
   * added shortcut configuration for inline configurator  
