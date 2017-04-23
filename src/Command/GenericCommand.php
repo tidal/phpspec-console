@@ -15,7 +15,11 @@ use Tidal\PhpSpec\ConsoleExtension\Contract\Command\{
     CommandInterface
 };
 use Tidal\PhpSpec\ConsoleExtension\Contract\WriterInterface;
-use Tidal\PhpSpec\ConsoleExtension\Behavior\Command\ConfigurableTrait;
+use Tidal\PhpSpec\ConsoleExtension\Behavior\Command\{
+    ConfigurableTrait,
+    HasInputTrait,
+    HasOutputTrait
+};
 use Tidal\PhpSpec\ConsoleExtension\Behavior\{
     HasWriterTrait,
     HasContainerTrait
@@ -28,6 +32,8 @@ use Tidal\PhpSpec\ConsoleExtension\Contract\Command\ConfigInterface as Config;
 class GenericCommand extends Command implements CommandInterface
 {
     use ConfigurableTrait,
+        HasInputTrait,
+        HasOutputTrait,
         HasWriterTrait,
         HasContainerTrait;
 
